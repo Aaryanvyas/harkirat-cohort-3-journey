@@ -1,0 +1,61 @@
+<!-- state derived frontends
+ 
+State = the variable parts of an app
+components = the building blocks that display the state 
+how to render state on the screen
+Rendering = the process of displaying the state on the screen
+taking the state and rendering it onn the DOM based on the Components -->
+<body>
+    <input type = "text"></input>
+    <button onclick = "addTodo()"> Add Todo!</button>
+    
+    <div id = "todos"></div>
+    <script>
+        let todos = [];
+        function addTodo(){
+            todos.push( {
+                title: document.querySelector("input").value,
+
+            })
+            render();
+        }
+
+        function deleteTodo(index){
+            todos.splice(index , 1);
+            render(); 
+        }
+        function createTodoElement(todo , index){
+            const DivEl = document.createElement("div");
+            const ButtonEl = document.createElement("button");
+            const h1 = document.createElement("h1");
+            ButtonEl.innerText = "Delete";
+            ButtonEl.onclick = function(){
+                deleteTodo(index);
+                
+            }
+            h1.innerText = todo.title;
+            DivEl.appendChild(h1);
+            DivEl.appendChild(ButtonEl);
+            return DivEl;
+        }
+        // react does for you what we are doing here manually
+        function render(){
+            document.querySelector("#todos").innerHTML = ""; 
+            
+
+           for( let i =0; i < todos.length; i++){
+            const element = createTodoElement(todos[i] , i);
+            
+            document.querySelector("#todos").appendChild(element);
+            
+            
+           
+
+           }
+            
+
+
+
+        }
+    </script>
+</body>
