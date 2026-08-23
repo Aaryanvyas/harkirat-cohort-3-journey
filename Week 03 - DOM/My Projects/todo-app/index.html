@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Todo App</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>My Todo List</h1>
+    <div class="todo-card">
+        <h2>Todo List</h2>
 
-        <div class="input-container">
-            <input type="text" id="todo-input" placeholder="Add a new task...">
-            <button onclick="addTodo()">Add Task</button>
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="Enter your task" autocomplete="off">
+            <button onclick="addTodo()" class="btn-add">Add</button>
         </div>
 
-        <div id="todos"></div>
+        <div id="todos">
+            <!-- Tasks will be added here -->
+        </div>
     </div>
 
     <script src="script.js"></script>
