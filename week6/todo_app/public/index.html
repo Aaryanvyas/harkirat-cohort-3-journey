@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo App</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <h1>My Todo App</h1>
+
+
+    <div>
+        <h2>Create Account</h2>
+
+        <input id="signup-username" type="text" placeholder="Enter username">
+
+        <input id="signup-password" type="password" placeholder="Enter password">
+
+        <button onclick="signup()">Create Account</button>
+
+        <h3 id="signup-message"></h3>
+    </div>
+
+    <div>
+        <h2>Sign In</h2>
+
+        <input id="signin-username" type="text" placeholder="Enter username">
+
+        <input id="signin-password" type="password" placeholder="Enter password">
+
+        <button onclick="signin()">Sign In</button>
+
+        <h3 id="signin-message"></h3>
+    </div>
+
+
+    <h2>Create Todo</h2>
+
+    <input id="todo-title" type="text" placeholder="Todo title">
+
+    <input id="todo-description" type="text" placeholder="Todo description">
+
+    <button onclick="createTodo()">Add Todo</button>
+
+    <h3 id="create-todo-message"></h3>
+    </div>
+
+
+    <div>
+        <h2>Your Todos</h2>
+
+        <button onclick="retrieveTodo()">
+            Refresh Todos
+        </button>
+
+        <h3 id="retrieve-todo-message"></h3>
+
+        <div id="todos"></div>
+    </div>
+
+
+    <div>
+        <h2>Update Todo</h2>
+
+        <input id="update-todo-id" type="text" placeholder="Todo ID">
+
+        <label>
+            <input id="update-todo-isCompleted" type="checkbox">
+            Mark completed
+        </label>
+
+        <button onclick="updateTodo()">
+            Update Todo
+        </button>
+
+        <h3 id="update-todo-message"></h3>
+    </div>
+
+
+    <div>
+        <h2>Delete Todo</h2>
+
+        <input id="delete-todo-id" type="text" placeholder="Todo ID">
+
+        <button onclick="deleteTodo()">
+            Delete Todo
+        </button>
+
+        <h3 id="delete-todo-message"></h3>
+    </div>
+
+
+    <div>
+        <h2>Mark Todo as Done</h2>
+
+        <input id="update-todo-done-id" type="text" placeholder="Todo ID">
+
+        <button onclick="updateTodoDone()">
+            Mark as Done
+        </button>
+
+        <h3 id="update-todo-done-message"></h3>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
