@@ -1,14 +1,36 @@
- {
- 
+{
+  
   "name": "aryan_nodejs",
+  
   "version": "1.0.0",
+  
   "description": "Node.js project for week 04",
+  
   "main": "index.js",
+  
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"No tests specified\" && exit 0"
+  
+    
+  "start": "node index.js"
+  
   },
+  
   "keywords": [],
+  
   "author": "",
-  "license": "ISC"
+  
+  "license": "ISC",
+  
+  "dependencies": {
+  
+    
+  "chalk": "^6.0.0",
+  
+    
+  "commander": "^15.0.0",
+  
+    
+  "express": "^5.2.1"
+  
+  }
 }

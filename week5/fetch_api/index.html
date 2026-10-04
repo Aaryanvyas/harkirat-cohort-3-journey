@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="posts"></div>
+  <script>
+    async function getfetchPosts() {
+      console.log("before sending request");
+      const response = await fetch("https://google/com")
+      const data = await response.json();
+      console.log(data);
+      console.log("request has been processed")
+      document.getElementById("posts").innerHTML = data.body
+      //axios is much easier than the fetch 
+
+    }
+    
+
+    fetchPosts();
+  </script>
+</body>
+
+</html> 
